@@ -224,7 +224,7 @@ from .comedycentral import (
     ComedyCentralTVIE,
     ToshIE,
 )
-from .commonmistakes import CommonMistakesIE, UnicodeBOMIE
+#from .commonmistakes import CommonMistakesIE, UnicodeBOMIE
 from .commonprotocols import (
     MmsIE,
     RtmpIE,
@@ -402,7 +402,7 @@ from .gamestar import GameStarIE
 from .gaskrank import GaskrankIE
 from .gazeta import GazetaIE
 from .gdcvault import GDCVaultIE
-from .generic import GenericIE
+#from .generic import GenericIE  # exclude it for now
 from .gfycat import GfycatIE
 from .giantbomb import GiantBombIE
 from .giga import GigaIE
@@ -1130,7 +1130,7 @@ from .teletask import TeleTaskIE
 from .telewebion import TelewebionIE
 from .tennistv import TennisTVIE
 from .tenplay import TenPlayIE
-from .testurl import TestURLIE
+#from .testurl import TestURLIE  # causes import cycle
 from .tf1 import TF1IE
 from .tfo import TFOIE
 from .theintercept import TheInterceptIE
