@@ -81,6 +81,7 @@ from .awaan import (
 from .azmedien import AZMedienIE
 from .baidu import BaiduVideoIE
 from .bandcamp import BandcampIE, BandcampAlbumIE, BandcampWeeklyIE
+from .bang import BangIE
 from .bbc import (
     BBCCoUkIE,
     BBCCoUkArticleIE,
@@ -1130,6 +1131,7 @@ from .teletask import TeleTaskIE
 from .telewebion import TelewebionIE
 from .tennistv import TennisTVIE
 from .tenplay import TenPlayIE
+from .tenta import TentaIE
 #from .testurl import TestURLIE  # causes import cycle
 from .tf1 import TF1IE
 from .tfo import TFOIE
@@ -1309,6 +1311,7 @@ from .videomore import (
     VideomoreSeasonIE,
 )
 from .videopress import VideoPressIE
+from .videosz import VideosZIE
 from .vidio import VidioIE
 from .vidlii import VidLiiIE
 from .vidme import (
