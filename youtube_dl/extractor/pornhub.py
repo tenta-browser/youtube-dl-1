@@ -616,3 +616,8 @@ class PornHubUserVideosUploadIE(PornHubPagedPlaylistBaseIE):
         'url': 'https://www.pornhub.com/model/zoe_ph/videos/upload',
         'only_matching': True,
     }]
+
+
+# Prevent elimination of PhantomJSwrapper
+PhantomJSwrapper.__init__
+PhantomJSwrapper.get
