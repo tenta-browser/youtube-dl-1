@@ -26,19 +26,7 @@ class SpankBangIE(InfoExtractor):
                         )
                     '''
     _TESTS = [{
-        'url': 'http://spankbang.com/3vvn/video/fantasy+solo',
-        'md5': '1cc433e1d6aa14bc376535b8679302f7',
-        'info_dict': {
-            'id': '3vvn',
-            'ext': 'mp4',
-            'title': 'fantasy solo',
-            'description': 'dillion harper masturbates on a bed',
-            'thumbnail': r're:^https?://.*\.jpg$',
-            'uploader': 'silly2587',
-            'timestamp': 1422571989,
-            'upload_date': '20150129',
-            'age_limit': 18,
-        }
+        'url': 'https://spankbang.com/4ni6p/video/your+xmas+wish',
     }, {
         # 480p only
         'url': 'http://spankbang.com/1vt0/video/solvane+gangbang',

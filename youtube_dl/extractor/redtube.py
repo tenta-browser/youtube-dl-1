@@ -17,17 +17,7 @@ from ..utils import (
 class RedTubeIE(InfoExtractor):
     _VALID_URL = r'https?://(?:(?:\w+\.)?redtube\.com/|embed\.redtube\.com/\?.*?\bid=)(?P<id>[0-9]+)'
     _TESTS = [{
-        'url': 'http://www.redtube.com/66418',
-        'md5': 'fc08071233725f26b8f014dba9590005',
-        'info_dict': {
-            'id': '66418',
-            'ext': 'mp4',
-            'title': 'Sucked on a toilet',
-            'upload_date': '20110811',
-            'duration': 596,
-            'view_count': int,
-            'age_limit': 18,
-        }
+        'url': 'https://www.redtube.com/36345091',
     }, {
         'url': 'http://embed.redtube.com/?bgcolor=000000&id=1443286',
         'only_matching': True,

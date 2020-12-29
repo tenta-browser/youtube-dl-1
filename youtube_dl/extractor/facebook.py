@@ -526,7 +526,7 @@ class FacebookIE(InfoExtractor):
 
         if not video_data and '/watchparty/' in url:
             post_data = {
-                'doc_id': 3731964053542869,
+                #'doc_id': 3731964053542869,
                 'variables': json.dumps({
                     'livingRoomID': video_id,
                 }),
