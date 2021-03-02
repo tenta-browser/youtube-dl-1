@@ -410,6 +410,16 @@ class PornHubIE(PornHubBaseIE):
                     video_url, video_id, 'mp4', entry_protocol='m3u8_native',
                     m3u8_id='hls', fatal=False))
                 continue
+            elif ext == 'unknown_video' and '/get_media?' in video_url:
+                media_json = self._download_json(video_url, video_id, 'Downloading media JSON')
+                for f in media_json:
+                    quality = str_to_int(f['quality'])
+                    formats.append({
+                        'url': f['videoUrl'],
+                        'format_id': '%dp' % quality,
+                        'height': quality
+                    })
+                continue
             tbr = None
             mobj = re.search(r'(?P<height>\d+)[pP]?_(?P<tbr>\d+)[kK]', video_url)
             if mobj:
