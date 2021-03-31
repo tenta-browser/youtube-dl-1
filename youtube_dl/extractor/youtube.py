@@ -249,7 +249,23 @@ class YoutubeBaseInfoExtractor(InfoExtractor):
 
         return True
 
+    def _initialize_consent(self):
+        cookies = self._get_cookies('https://www.youtube.com/')
+        if cookies.get('__Secure-3PSID'):
+            return
+        consent_id = None
+        consent = cookies.get('CONSENT')
+        if consent:
+            if 'YES' in consent.value:
+                return
+            consent_id = self._search_regex(
+                r'PENDING\+(\d+)', consent.value, 'consent', default=None)
+        if not consent_id:
+            consent_id = random.randint(100, 999)
+        self._set_cookie('.youtube.com', 'CONSENT', 'YES+cb.20210328-17-p0.en+FX+%s' % consent_id)
+
     def _real_initialize(self):
+        self._initialize_consent()
         if self._downloader is None:
             return
         if not self._login():
@@ -1432,7 +1448,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
         base_url = self.http_scheme() + '//www.youtube.com/'
         webpage_url = base_url + 'watch?v=' + video_id
         webpage = self._download_webpage(
-            webpage_url + '&bpctr=9999999999', video_id, fatal=False)
+            webpage_url + '&bpctr=9999999999&has_verified=1', video_id, fatal=False)
 
         player_response = None
         if webpage:
